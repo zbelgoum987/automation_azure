@@ -13,6 +13,9 @@ import os
 def main():
     e = Env()
     # Get Azure machine learning workspace
+    print((e.workspace_name,
+        e.subscription_id,
+        e.resource_group))
     aml_workspace = Workspace.get(
         name=e.workspace_name,
         subscription_id=e.subscription_id,
